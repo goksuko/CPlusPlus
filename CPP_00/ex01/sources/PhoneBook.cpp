@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:21 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:39:25 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/01/10 11:28:58 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ void PhoneBook::add(void)
 	nick_name = enter_str("Nickname: ");
 	phone_number = enter_nbr("Phone Number: ");
 	darkest_secret = enter_str("Darkest Secret: ");
+
 	Contact new_contact(first_name, last_name, nick_name, phone_number, darkest_secret);
+	
 	contacts[index] = new_contact;
 	std::cout << "Contact \"" << first_name << " " << last_name << "\" created." << std::endl;
 	this->index++;
@@ -97,7 +99,7 @@ void PhoneBook::search(int count)
 	else
 	{
 		std::cout << std::endl;
-		std::cout << "No contacts available" << std::endl;
+		std::cout << "|---        NO CONTACTS AVAILABLE        ---|" << std::endl;
 		return ;
 	}
 	while (1)

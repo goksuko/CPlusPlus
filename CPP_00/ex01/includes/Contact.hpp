@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:08 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:39:10 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/01/10 11:33:41 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,22 @@
 
 class Contact
 {
+    public:
+        Contact(void); // Default Constructor
+        Contact(std::string &new_first, std::string &new_last, \
+        std::string &new_nick, std::string &new_number, std::string &new_secret); // Parameterized Constructor
+            
+        void		print_blocks(void);
+        std::string	get_firstname(void);
+        std::string	get_lastname(void);
+        std::string	get_nickname(void);
+        
     private:
         std::string first_name;
         std::string last_name;
         std::string nick_name;
         std::string phone_number;
         std::string darkest_secret;
-		
-    public:
-		Contact(void); // Default Constructor
-		Contact(std::string &new_first, std::string &new_last, \
-		std::string &new_nick, std::string &new_number, std::string &new_secret); // Parameterized Constructor
-        
-		void		print_blocks(void);
-		std::string	get_firstname(void);
-		std::string	get_lastname(void);
-		std::string	get_nickname(void);
 };
 
 void	print_dot(std::string);

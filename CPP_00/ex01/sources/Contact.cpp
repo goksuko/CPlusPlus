@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:15 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:39:17 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/01/10 09:58:15 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@ Contact::Contact(void)
 		phone_number(),
 		darkest_secret()
 { }
+
+// Contact::Contact(void) {
+//     this->first_name = "";
+//     this->last_name = "";
+//     this->nick_name = "";
+//     this->phone_number = "";
+//     this->darkest_secret = "";
+// };
 
 Contact::Contact(std::string &new_first, std::string &new_last, \
 				 std::string &new_nick, std::string &new_phone, \
