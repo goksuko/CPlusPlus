@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:46 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/10 11:51:01 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/01/11 15:38:25 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // Static member variables should not be initialized in the constructor's initializer list.
 // Instead, they should be defined and initialized outside the class definition.
 
-// diff -q -y --suppress-common-lines <(cut -c 18- lost_and_found.txt) <(cut -c 19- 19920104_091532.log)
+// ./lost_and_found > lost_and_found.txt && diff -y --suppress-common-lines <(cut -c 17- lost_and_found.txt) <(cut -c 18- 19920104_091532.log)
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;

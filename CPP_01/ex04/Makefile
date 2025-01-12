@@ -6,11 +6,11 @@
 #    By: akaya-oz <akaya-oz@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/12/16 11:45:37 by akaya-oz      #+#    #+#                  #
-#    Updated: 2025/01/11 15:42:57 by akaya-oz      ########   odam.nl          #
+#    Updated: 2025/01/11 22:10:58 by akaya-oz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= 	zombies
+NAME 		= 	program
 
 #UTILS
 FLAGS 		=	-Wall -Werror -Wextra -std=c++11
@@ -18,14 +18,12 @@ CC 			= 	c++
 RM 			=	rm -rf
 AR			=	ar -rc
 SRC			=	main.cpp \
-				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp \
+				file.cpp \
 
 OBJ_DIR		:=	./objects
 SRC_DIR 	:= 	./sources
 HEADER_DIR	:= 	./includes
-HEADERS		:= 	Zombie.hpp \
+HEADERS		:= 	file.hpp \
 
 Color_Off	=	"\033[0m"
 Green		=	"\033[0;32m"

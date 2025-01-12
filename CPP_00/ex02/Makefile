@@ -6,7 +6,7 @@
 #    By: akaya-oz <akaya-oz@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/12/16 11:45:37 by akaya-oz      #+#    #+#                  #
-#    Updated: 2024/12/16 11:56:55 by akaya-oz      ########   odam.nl          #
+#    Updated: 2025/01/11 15:05:13 by akaya-oz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 
 $(OBJ_DIR):
 	@mkdir $@
+	
 clean:
 	@echo ${Yellow} Deleting ${OBJ_DIR} ${Color_Off}
 	@${RM} ${OBJ_DIR}
+	
 fclean: clean
 	@echo ${Yellow} Deleting ${NAME} ${Color_off}
 	@${RM} ${NAME}
