@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:40:04 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/11 16:03:54 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/02/15 12:05:13 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int main()
     Zombie *heapZombie = newZombie("heapZombie");
     heapZombie->announce();
 
-
+    std::cout << std::endl;
+    
     std::cout << "STACK: Zombie is created" << std::endl;
     randomChump("stackZombie");
 
