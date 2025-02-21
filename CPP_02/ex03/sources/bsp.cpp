@@ -25,7 +25,7 @@
 // The algorithm is used in robotics for motion planning and trajectory generation.
 // The algorithm is used in computer vision for object tracking and pose estimation.
 
-// bool bsp( Point const a, Point const b, Point const c, Point const point)
+// bool bsp(Point const a, Point const b, Point const c, Point const point)
 // {
 // 	Fixed result = (b.getX() - a.getX()) * (point.getY() - a.getY()) - (b.getY() - a.getY()) * (point.getX() - a.getX());
 // 	Fixed result2 = (c.getX() - b.getX()) * (point.getY() - b.getY()) - (c.getY() - b.getY()) * (point.getX() - b.getX());
@@ -54,7 +54,7 @@ float area(const Point& a, const Point& b, const Point& c)
 	return std::abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0);
 }
 
-bool bsp( Point const a, Point const b, Point const c, Point const point)
+bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
 	float A = area(a, b, c);			// Calculate area of ABC
 	float A1 = area(point, b, c);		// Calculate area of PBC

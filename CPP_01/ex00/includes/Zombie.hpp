@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:59 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:40:01 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/02/21 23:39:57 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Zombie
 		std::string	_name;
 };
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+Zombie* newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif

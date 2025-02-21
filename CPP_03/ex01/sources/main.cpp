@@ -1,27 +1,25 @@
 #include "../includes/ClapTrap.hpp"
+#include "../includes/ScavTrap.hpp"
+
 
 int main(void)
 {
-    ClapTrap VH("VAULT HUNTER");
+    ClapTrap CLAPPER("CLAPPER");
 	ClapTrap Ninja("NINJA ASSASSIN");
+    ScavTrap SCAVVER("SCAVVER");
 
-    VH.attack("NINJA ASSASSIN");
-    VH.takeDamage(0);
-    VH.beRepaired(1);
-    VH.takeDamage(9);
-    VH.attack("NINJA ASSASSIN");
+    SCAVVER.attack("NINJA ASSASSIN");
+    SCAVVER.takeDamage(5);
+    SCAVVER.beRepaired(1);
+    SCAVVER.guardGate();
+    SCAVVER.takeDamage(9);
+    SCAVVER.attack("NINJA ASSASSIN");
 
-    VH.beRepaired(1);
-    VH.beRepaired(1);
-    VH.beRepaired(1);
-    VH.beRepaired(1);
-    VH.beRepaired(1);
-    VH.attack("NINJA ASSASSIN");
-    VH.attack("NINJA ASSASSIN");
-    VH.attack("NINJA ASSASSIN");
-	VH.takeDamage(10);
-	VH.takeDamage(20);
-    VH.beRepaired(1);
+	CLAPPER.takeDamage(5);
+    CLAPPER.beRepaired(1);
+    CLAPPER.attack("NINJA ASSASSIN");
+	CLAPPER.takeDamage(20);
+    CLAPPER.beRepaired(1);
 
     return (0);
 }

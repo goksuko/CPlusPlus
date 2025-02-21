@@ -6,14 +6,14 @@
 #    By: akaya-oz <akaya-oz@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/12/16 11:45:37 by akaya-oz      #+#    #+#                  #
-#    Updated: 2025/02/21 08:26:41 by akaya-oz      ########   odam.nl          #
+#    Updated: 2025/02/21 13:02:18 by akaya-oz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Fixed
 
 #UTILS
-FLAGS 		=	-Wall -Werror -Wextra -std=c++11
+FLAGS 		=	-Wall -Werror -Wextra -std=c++11 -Wshadow -Wno-shadow
 CC 			= 	c++
 RM 			=	rm -rf
 AR			=	ar -rc

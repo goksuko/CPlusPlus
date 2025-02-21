@@ -9,16 +9,16 @@ class Harl
 		Harl(void);
 		~Harl(void);
 		
-		void complain( std::string level );
+		void complain(std::string level);
 
 	private:
 		std::string _level;
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-		void switch_off( void );
-		void (Harl::*ptr[5]) ( void );
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
+		void switch_off(void);
+		void (Harl::*ptr[5]) (void);
     
     public:
 

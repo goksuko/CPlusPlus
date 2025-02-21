@@ -1,8 +1,8 @@
-project=CPP_03
+project=CPP_04
 directory=ex00
 name=Point
-sources="main.cpp ClapTrap.cpp"
-includes="ClapTrap.hpp"
+sources="main.cpp Animal.cpp Dog.cpp Cat.cpp"
+includes="Animal.hpp Dog.hpp Cat.hpp"
 mkdir $project
 cd $project
 mkdir $directory
