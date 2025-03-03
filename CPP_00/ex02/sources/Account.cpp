@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:46 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/03/03 11:24:17 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/03 13:22:39 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 // Static member variables should not be initialized in the constructor's initializer list.
 // Instead, they should be defined and initialized outside the class definition.
+
+// make && ./lost_and_found > lost_and_found.txt
+// diff -q -y --suppress-common-lines <(cut -c 18- lost_and_found.txt) <(cut -c 18- 19920104_091532.log)
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
@@ -87,7 +90,7 @@ bool Account::makeWithdrawal(int withdrawal)
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";" << "p_amount:" << _amount << \
-	";" << "withdrawal:" << withdrawal << ";";
+	";" << "withdrawal:";
 	if (_amount < withdrawal)
 	{
 		std::cout << "refused" << std::endl;
@@ -97,7 +100,7 @@ bool Account::makeWithdrawal(int withdrawal)
 	_totalAmount = _totalAmount - withdrawal;
 	_nbWithdrawals = _nbWithdrawals + 1;
 	_totalNbWithdrawals = _totalNbWithdrawals + 1;
-	std::cout << "amount:" << _amount << ";" << "nb_withdrawals:" << _nbWithdrawals << \
+	std::cout << withdrawal << ";" << "amount:" << _amount << ";" << "nb_withdrawals:" << _nbWithdrawals << \
 	std::endl;
 	return (true);
 }
