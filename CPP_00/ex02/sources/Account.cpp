@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:46 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/11 15:38:25 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/03 11:24:17 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 # include <iostream> // for std::cout, std::cin
 # include <ctime> // for std::time_t, std::tm, std::time, std::localtime
+#include <iomanip> // for std::setw, std::setfill
 
 // Static member variables should not be initialized in the constructor's initializer list.
 // Instead, they should be defined and initialized outside the class definition.
-
-// ./lost_and_found > lost_and_found.txt && diff -y --suppress-common-lines <(cut -c 17- lost_and_found.txt) <(cut -c 18- 19920104_091532.log)
 
 int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
@@ -78,8 +77,9 @@ void Account::makeDeposit(int deposit)
 	";" << "deposit:" << deposit << ";";
 	_amount = _amount + deposit;
 	_totalAmount = _totalAmount + deposit;
+	_nbDeposits = _nbDeposits + 1;
 	_totalNbDeposits = _totalNbDeposits + 1;
-	std::cout << "amount:" << _amount << ";" << "nb_deposits:" << _totalNbDeposits << \
+	std::cout << "amount:" << _amount << ";" << "nb_deposits:" << _nbDeposits << \
 	std::endl;
 }
 
@@ -95,8 +95,9 @@ bool Account::makeWithdrawal(int withdrawal)
 	}
 	_amount = _amount - withdrawal;
 	_totalAmount = _totalAmount - withdrawal;
+	_nbWithdrawals = _nbWithdrawals + 1;
 	_totalNbWithdrawals = _totalNbWithdrawals + 1;
-	std::cout << "amount:" << _amount << ";" << "nb_withdrawals:" << _totalNbWithdrawals << \
+	std::cout << "amount:" << _amount << ";" << "nb_withdrawals:" << _nbWithdrawals << \
 	std::endl;
 	return (true);
 }
@@ -110,14 +111,14 @@ void Account::displayStatus(void) const
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";" << "amount:" << _amount << \
-	";" << "deposits:" << _totalNbDeposits << ";" << "withdrawals:" << \
-	_totalNbWithdrawals << std::endl;
+	";" << "deposits:" << _nbDeposits << ";" << "withdrawals:" << \
+	_nbWithdrawals << std::endl;
 }
 
 void Account::_displayTimestamp(void)
 {
 	std::time_t t = std::time(0);
 	std::tm *now = std::localtime(&t);
-	std::cout << "[" << now->tm_year + 1900 << now->tm_mon + 1 << now->tm_mday << \
-	"_" << now->tm_hour << now->tm_min << now->tm_sec << "] ";
+	std::cout << "[" << now->tm_year + 1900 << std::setw(2) << std::setfill('0') << now->tm_mon + 1 << std::setw(2) << std::setfill('0') << now->tm_mday << \
+    "_" << std::setw(2) << std::setfill('0') << now->tm_hour << std::setw(2) << std::setfill('0') << now->tm_min << std::setw(2) << std::setfill('0') << now->tm_sec << "] ";
 }
