@@ -6,13 +6,12 @@
 #    By: akaya-oz <akaya-oz@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/12/16 22:38:50 by akaya-oz      #+#    #+#                  #
-#    Updated: 2024/12/16 22:38:53 by akaya-oz      ########   odam.nl          #
+#    Updated: 2025/03/04 12:12:06 by akaya-oz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= 	megaphone
 
-#UTILS
 FLAGS 		=	-Wall -Werror -Wextra -std=c++11
 CC 			= 	c++
 RM 			=	rm -rf
@@ -32,7 +31,7 @@ OBJ_DIR		:=	./obj
 SRC_DIR 	:= 	./
 
 # Reset
-Color_Off	=	"\033[0m"			# Text Reset
+Reset	=	"\033[0m"			# Text Reset
 
 # Regular Colors
 Black		=	"\033[0;30m"		# Black
@@ -59,13 +58,13 @@ HEADERS :=	$(addprefix $(HEADER_DIR)/, $(HEADERS))
 all:	${NAME}
 
 ${NAME}: ${OBJ}
-	@echo ${Blue} Building ${NAME} ${Color_Off}
+	@echo ${Blue} Building ${NAME} ${Reset}
 	@${CC} ${OBJ} ${FLAGS} -o ${NAME}
-	@echo ${Green} Complete 😊 ${Color_Off}
+	@echo ${Green} Complete 😊 ${Reset}
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 # @mkdir -p ${OBJ_DIR}
-	@echo ${Blue} Compiling: $< ${Color_Off}
+	@echo ${Blue} Compiling: $< ${Reset}
 	@${CC} ${FLAGS} -c $< -o $@
 
 $(OBJ_DIR):
@@ -76,11 +75,11 @@ $(OBJ_DIR):
 #	@$(MAKE) WITH_BONUS=true all
 
 clean:
-	@echo ${Yellow} Deleting ${OBJ_DIR} ${Color_Off}
+	@echo ${Yellow} Deleting ${OBJ_DIR} ${Reset}
 	@${RM} ${OBJ_DIR}
 	
 fclean: clean
-	@echo ${Yellow} Deleting ${NAME} ${Color_off}
+	@echo ${Yellow} Deleting ${NAME} ${Reset}
 	@${RM} ${NAME}
 	
 re:	fclean all
