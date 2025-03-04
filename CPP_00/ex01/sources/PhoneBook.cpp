@@ -6,15 +6,15 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:21 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/10 11:28:58 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/04 11:25:29 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void)
-	:	index(0),
-		contacts()
+	:	_index(0),
+		_contacts()
 { }
 
 void PhoneBook::add(void)
@@ -30,10 +30,10 @@ void PhoneBook::add(void)
 
 	Contact new_contact(first_name, last_name, nick_name, phone_number, darkest_secret);
 	
-	contacts[index] = new_contact;
+	_contacts[_index] = new_contact;
 	std::cout << "Contact \"" << first_name << " " << last_name << "\" created." << std::endl;
-	this->index++;
-	this->index = this->index % 8;
+	this->_index++;
+	this->_index = this->_index % 8;
 }
 
 std::string PhoneBook::check_if_empty(std::string entry, std::string info)
@@ -92,7 +92,7 @@ void PhoneBook::search(int count)
     for (i = 0; i < count; i++)
     {
         std::cout << "|" << std::setw(10) << i + 1 << "|";
-        contacts[i].print_blocks();
+        _contacts[i].print_blocks();
     }
 	if (count > 0)
 		std::cout << "|----------|----------|----------|----------|" << std::endl;
@@ -118,9 +118,9 @@ void PhoneBook::search(int count)
     {
 		std::cout << std::endl;
         std::cout << "~~ Index       : " << id << std::endl;
-        std::cout << "~~ First Name  : " << contacts[id - 1].get_firstname() << std::endl;
-        std::cout << "~~ Last Name   : " << contacts[id - 1].get_lastname() << std::endl;
-        std::cout << "~~ Nickname    : " << contacts[id - 1].get_nickname() << std::endl;
+        std::cout << "~~ First Name  : " << _contacts[id - 1].get_firstname() << std::endl;
+        std::cout << "~~ Last Name   : " << _contacts[id - 1].get_lastname() << std::endl;
+        std::cout << "~~ Nickname    : " << _contacts[id - 1].get_nickname() << std::endl;
         std::cout << std::endl;
     }
 }

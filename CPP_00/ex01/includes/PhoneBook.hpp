@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:11 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:39:13 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/04 11:24:21 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class PhoneBook
 
 
 	private:
-		int 	index;
-		Contact contacts[8];
+		int 	_index;
+		Contact _contacts[8];
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:08 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/10 11:33:41 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/04 11:24:33 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ class Contact
         std::string	get_nickname(void);
         
     private:
-        std::string first_name;
-        std::string last_name;
-        std::string nick_name;
-        std::string phone_number;
-        std::string darkest_secret;
+        std::string _first_name;
+        std::string _last_name;
+        std::string _nick_name;
+        std::string _phone_number;
+        std::string _darkest_secret;
 };
 
 void	print_dot(std::string);
