@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:18 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:39:20 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/06 12:57:45 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ int	main()
 	{
 		std::cout << "\nPlease enter a command: (ADD, SEARCH or EXIT)" << std::endl;
 		std::getline(std::cin, command);
+		if (std::cin.eof())
+		{
+			std::cout << "EOF detected, exiting program" << std::endl;
+			break;
+			return(1);
+		}
 		if (command == "ADD")
 		{
 			phonebook.add();

@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:39:21 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/03/04 11:25:29 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/06 12:56:57 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ std::string PhoneBook::check_if_empty(std::string entry, std::string info)
 		std::cout << "Please enter a valid input" << std::endl;
 		std::cout << info;
 		std::getline(std::cin, entry);
+		if (std::cin.eof())
+		{
+			std::cout << "EOF detected, exiting program" << std::endl;
+			break;
+			exit();
+		};
 	}
 	return (entry);
 }
@@ -54,6 +60,12 @@ std::string PhoneBook::check_if_numeric(std::string entry, std::string info)
 		std::cout << "Please enter a valid input" << std::endl;
 		std::cout << info;
 		std::getline(std::cin, entry);
+		if (std::cin.eof())
+		{
+			std::cout << "EOF detected, exiting program" << std::endl;
+			break;
+			exit();
+		};
 	}
 	return (entry);
 }
@@ -64,6 +76,11 @@ std::string PhoneBook::enter_str(std::string info)
 
 	std::cout << info;
 	std::getline(std::cin, entry);
+	if (std::cin.eof())
+	{
+		std::cout << "EOF detected, exiting program" << std::endl;
+		exit();
+	};
 	entry = check_if_empty(entry, info);
 	return (entry);
 }
@@ -74,6 +91,11 @@ std::string PhoneBook::enter_nbr(std::string info)
 
 	std::cout << info;
 	std::getline(std::cin, entry);
+	if (std::cin.eof())
+	{
+		std::cout << "EOF detected, exiting program" << std::endl;
+		exit();
+	};
 	entry = check_if_numeric(entry, info);
 	return (entry);
 }
@@ -107,6 +129,12 @@ void PhoneBook::search(int count)
 		std::cout << std::endl;
 		std::cout << "Enter Index: ";
 		std::getline(std::cin, index);
+		if (std::cin.eof())
+		{
+			std::cout << "EOF detected, exiting program" << std::endl;
+			break;
+			exit();
+		};
 		index = check_if_numeric(index, "Enter Index: ");
 		id = std::stoi(index);
 		if (!(id >= 1 && id <= 8) || id > count)
