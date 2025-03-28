@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:40:53 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:40:55 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/17 21:28:50 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class HumanB
 		void attack();
 
 	private:
-		std::string _name;
-		Weapon *_weapon;
+		std::string __name;
+		Weapon *__weapon;
 };
 
 #endif

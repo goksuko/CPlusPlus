@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:40:56 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2024/12/16 22:40:58 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/17 21:25:12 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class Weapon
 		Weapon(std::string type);
 		~Weapon();
 
-		const std::string &getType();
+		const std::string &getType() const;
 		void setType(std::string type);
 
 	private:
-		std::string _type;
+		std::string __type;
 };
 
 #endif

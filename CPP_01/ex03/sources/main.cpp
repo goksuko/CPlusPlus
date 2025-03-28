@@ -6,7 +6,7 @@
 /*   By: akaya-oz <akaya-oz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/12/16 22:41:06 by akaya-oz      #+#    #+#                 */
-/*   Updated: 2025/01/11 22:08:05 by akaya-oz      ########   odam.nl         */
+/*   Updated: 2025/03/17 21:41:04 by akaya-oz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main()
 		club.setType("some other type of club");
 		bob.attack();
 	}
+	std::cout << std::endl;
 	{
 		Weapon club = Weapon("crude spiked club");
 		

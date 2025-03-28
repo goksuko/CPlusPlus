@@ -6,7 +6,7 @@
 #    By: akaya-oz <akaya-oz@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2024/12/16 11:45:37 by akaya-oz      #+#    #+#                  #
-#    Updated: 2025/03/04 12:12:06 by akaya-oz      ########   odam.nl          #
+#    Updated: 2025/03/17 17:17:19 by akaya-oz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC_DIR 	:= 	./sources
 HEADER_DIR	:= 	./includes
 HEADERS		:= 	Zombie.hpp \
 
-Reset	=	"\033[0m"
+Reset		=	"\033[0m"
 Green		=	"\033[0;32m"
 Yellow		=	"\033[0;33m"
 Blue		=	"\033[0;34m"
